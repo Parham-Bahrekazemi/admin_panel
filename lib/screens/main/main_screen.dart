@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/menu_controller.dart';
+import '../../controllers/menu_controller.dart';
 import 'package:flutter_application_1/screens/dashboard/dashboard_screen.dart';
 import 'package:flutter_application_1/screens/responsive.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +11,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: context.read<MenuController>().scaffoldKey,
+      key: context.read<MenuControllerProvider>().scaffoldKey,
       drawer: const SlideMenu(),
       body: SafeArea(
         child: Row(
